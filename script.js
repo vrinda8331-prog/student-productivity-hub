@@ -169,18 +169,23 @@ quoteBtn.addEventListener("click", getQuote);
 
 async function getQuote() {
 
-  try {
+  let quotes = [
 
-    let response = await fetch("https://api.quotable.io/random");
+    "Success is the sum of small efforts repeated daily.",
 
-    let data = await response.json();
+    "Dream big and dare to fail.",
 
-    quote.innerText = `"${data.content}"`;
+    "Push yourself because no one else will do it for you.",
 
-  }
+    "Discipline is the bridge between goals and achievement.",
 
-  catch(error) {
+    "Stay focused and never give up.",
 
-    quote.innerText = "Unable to fetch quote.";
-  }
+    "Small progress is still progress."
+
+  ];
+
+  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+  quote.innerText = randomQuote;
 }
