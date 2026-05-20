@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Productivity Hub</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+
+    <h2>StudyHub</h2>
+
+    <div class="nav-links">
+      <button onclick="showTab('home')">Home</button>
+      <button onclick="showTab('tasks')">Tasks</button>
+      <button onclick="showTab('notes')">Notes</button>
+      <button onclick="showTab('timer')">Timer</button>
+      <button onclick="showTab('about')">About</button>
+    </div>
+
+  </nav>
+
+
+
+
+
+
+  <!-- HOME -->
+
+  <section id="home" class="tab">
+
+    <div class="card">
+
+      <h1>Student Productivity Hub</h1>
+
+      <p>
+        Organize your studies, manage tasks, save notes,
+        and stay productive.
+      </p>
+
+      <button id="quoteBtn">Get Motivation</button>
+
+      <p id="quote"></p>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- TASKS -->
+
+  <section id="tasks" class="tab hidden">
+
+    <div class="card">
+
+      <h2>Task Manager</h2>
+
+      <div class="input-group">
+
+        <input type="text" id="taskInput" placeholder="Enter a task">
+
+        <button id="addTaskBtn">Add</button>
+
+      </div>
+
+      <ul id="taskList"></ul>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- NOTES -->
+
+  <section id="notes" class="tab hidden">
+
+    <div class="card">
+
+      <h2>Study Notes</h2>
+
+      <textarea
+        id="noteArea"
+        rows="10"
+        placeholder="Write your notes here..."
+      ></textarea>
+
+      <button id="saveNoteBtn">Save Notes</button>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- TIMER -->
+
+  <section id="timer" class="tab hidden">
+
+    <div class="card">
+
+      <h2>Study Timer</h2>
+
+      <h1 id="time">00:00</h1>
+
+      <div class="timer-buttons">
+
+        <button onclick="startTimer()">Start</button>
+
+        <button onclick="stopTimer()">Stop</button>
+
+        <button onclick="resetTimer()">Reset</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- ABOUT -->
+
+  <section id="about" class="tab hidden">
+
+    <div class="card">
+
+      <h2>About Project</h2>
+
+      <p>
+        This project is developed using HTML, CSS and JavaScript.
+        It demonstrates DOM Manipulation, Event Handling,
+        localStorage and Fetch API concepts.
+      </p>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
